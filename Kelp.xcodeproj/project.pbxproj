@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CACAA85118DBF4E800DDBDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85018DBF4E800DDBDCD /* Foundation.framework */; };
+		CACAA85318DBF4E800DDBDCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */; };
+		CACAA85518DBF4E800DDBDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85418DBF4E800DDBDCD /* UIKit.framework */; };
+		CACAA85B18DBF4E800DDBDCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACAA85918DBF4E800DDBDCD /* InfoPlist.strings */; };
+		CACAA85D18DBF4E800DDBDCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA85C18DBF4E800DDBDCD /* main.m */; };
+		CACAA86118DBF4E800DDBDCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA86018DBF4E800DDBDCD /* AppDelegate.m */; };
+		CACAA86318DBF4E800DDBDCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACAA86218DBF4E800DDBDCD /* Images.xcassets */; };
+		CACAA86A18DBF4E800DDBDCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA86918DBF4E800DDBDCD /* XCTest.framework */; };
+		CACAA86B18DBF4E800DDBDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85018DBF4E800DDBDCD /* Foundation.framework */; };
+		CACAA86C18DBF4E800DDBDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85418DBF4E800DDBDCD /* UIKit.framework */; };
+		CACAA87418DBF4E800DDBDCD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CACAA87218DBF4E800DDBDCD /* InfoPlist.strings */; };
+		CACAA87618DBF4E800DDBDCD /* KelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA87518DBF4E800DDBDCD /* KelpTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CACAA86D18DBF4E800DDBDCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CACAA84518DBF4E800DDBDCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CACAA84C18DBF4E800DDBDCD;
+			remoteInfo = Kelp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CACAA84D18DBF4E800DDBDCD /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CACAA85018DBF4E800DDBDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CACAA85418DBF4E800DDBDCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CACAA85818DBF4E800DDBDCD /* Kelp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kelp-Info.plist"; sourceTree = "<group>"; };
+		CACAA85A18DBF4E800DDBDCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CACAA85C18DBF4E800DDBDCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CACAA85E18DBF4E800DDBDCD /* Kelp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kelp-Prefix.pch"; sourceTree = "<group>"; };
+		CACAA85F18DBF4E800DDBDCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CACAA86018DBF4E800DDBDCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CACAA86218DBF4E800DDBDCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CACAA86818DBF4E800DDBDCD /* KelpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KelpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CACAA86918DBF4E800DDBDCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CACAA87118DBF4E800DDBDCD /* KelpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KelpTests-Info.plist"; sourceTree = "<group>"; };
+		CACAA87318DBF4E800DDBDCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CACAA87518DBF4E800DDBDCD /* KelpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KelpTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CACAA84A18DBF4E800DDBDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA85318DBF4E800DDBDCD /* CoreGraphics.framework in Frameworks */,
+				CACAA85518DBF4E800DDBDCD /* UIKit.framework in Frameworks */,
+				CACAA85118DBF4E800DDBDCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CACAA86518DBF4E800DDBDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA86A18DBF4E800DDBDCD /* XCTest.framework in Frameworks */,
+				CACAA86C18DBF4E800DDBDCD /* UIKit.framework in Frameworks */,
+				CACAA86B18DBF4E800DDBDCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CACAA84418DBF4E800DDBDCD = {
+			isa = PBXGroup;
+			children = (
+				CACAA85618DBF4E800DDBDCD /* Kelp */,
+				CACAA86F18DBF4E800DDBDCD /* KelpTests */,
+				CACAA84F18DBF4E800DDBDCD /* Frameworks */,
+				CACAA84E18DBF4E800DDBDCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CACAA84E18DBF4E800DDBDCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA84D18DBF4E800DDBDCD /* Kelp.app */,
+				CACAA86818DBF4E800DDBDCD /* KelpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CACAA84F18DBF4E800DDBDCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA85018DBF4E800DDBDCD /* Foundation.framework */,
+				CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */,
+				CACAA85418DBF4E800DDBDCD /* UIKit.framework */,
+				CACAA86918DBF4E800DDBDCD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CACAA85618DBF4E800DDBDCD /* Kelp */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA85F18DBF4E800DDBDCD /* AppDelegate.h */,
+				CACAA86018DBF4E800DDBDCD /* AppDelegate.m */,
+				CACAA86218DBF4E800DDBDCD /* Images.xcassets */,
+				CACAA85718DBF4E800DDBDCD /* Supporting Files */,
+			);
+			path = Kelp;
+			sourceTree = "<group>";
+		};
+		CACAA85718DBF4E800DDBDCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA85818DBF4E800DDBDCD /* Kelp-Info.plist */,
+				CACAA85918DBF4E800DDBDCD /* InfoPlist.strings */,
+				CACAA85C18DBF4E800DDBDCD /* main.m */,
+				CACAA85E18DBF4E800DDBDCD /* Kelp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CACAA86F18DBF4E800DDBDCD /* KelpTests */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA87518DBF4E800DDBDCD /* KelpTests.m */,
+				CACAA87018DBF4E800DDBDCD /* Supporting Files */,
+			);
+			path = KelpTests;
+			sourceTree = "<group>";
+		};
+		CACAA87018DBF4E800DDBDCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CACAA87118DBF4E800DDBDCD /* KelpTests-Info.plist */,
+				CACAA87218DBF4E800DDBDCD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CACAA84C18DBF4E800DDBDCD /* Kelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CACAA87918DBF4E800DDBDCD /* Build configuration list for PBXNativeTarget "Kelp" */;
+			buildPhases = (
+				CACAA84918DBF4E800DDBDCD /* Sources */,
+				CACAA84A18DBF4E800DDBDCD /* Frameworks */,
+				CACAA84B18DBF4E800DDBDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kelp;
+			productName = Kelp;
+			productReference = CACAA84D18DBF4E800DDBDCD /* Kelp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CACAA86718DBF4E800DDBDCD /* KelpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CACAA87C18DBF4E800DDBDCD /* Build configuration list for PBXNativeTarget "KelpTests" */;
+			buildPhases = (
+				CACAA86418DBF4E800DDBDCD /* Sources */,
+				CACAA86518DBF4E800DDBDCD /* Frameworks */,
+				CACAA86618DBF4E800DDBDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CACAA86E18DBF4E800DDBDCD /* PBXTargetDependency */,
+			);
+			name = KelpTests;
+			productName = KelpTests;
+			productReference = CACAA86818DBF4E800DDBDCD /* KelpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CACAA84518DBF4E800DDBDCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Eric Socolofsky";
+				TargetAttributes = {
+					CACAA86718DBF4E800DDBDCD = {
+						TestTargetID = CACAA84C18DBF4E800DDBDCD;
+					};
+				};
+			};
+			buildConfigurationList = CACAA84818DBF4E800DDBDCD /* Build configuration list for PBXProject "Kelp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CACAA84418DBF4E800DDBDCD;
+			productRefGroup = CACAA84E18DBF4E800DDBDCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CACAA84C18DBF4E800DDBDCD /* Kelp */,
+				CACAA86718DBF4E800DDBDCD /* KelpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CACAA84B18DBF4E800DDBDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA85B18DBF4E800DDBDCD /* InfoPlist.strings in Resources */,
+				CACAA86318DBF4E800DDBDCD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CACAA86618DBF4E800DDBDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA87418DBF4E800DDBDCD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CACAA84918DBF4E800DDBDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA86118DBF4E800DDBDCD /* AppDelegate.m in Sources */,
+				CACAA85D18DBF4E800DDBDCD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CACAA86418DBF4E800DDBDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CACAA87618DBF4E800DDBDCD /* KelpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CACAA86E18DBF4E800DDBDCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CACAA84C18DBF4E800DDBDCD /* Kelp */;
+			targetProxy = CACAA86D18DBF4E800DDBDCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CACAA85918DBF4E800DDBDCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CACAA85A18DBF4E800DDBDCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CACAA87218DBF4E800DDBDCD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CACAA87318DBF4E800DDBDCD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CACAA87718DBF4E800DDBDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CACAA87818DBF4E800DDBDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CACAA87A18DBF4E800DDBDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kelp/Kelp-Prefix.pch";
+				INFOPLIST_FILE = "Kelp/Kelp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CACAA87B18DBF4E800DDBDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kelp/Kelp-Prefix.pch";
+				INFOPLIST_FILE = "Kelp/Kelp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CACAA87D18DBF4E800DDBDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kelp.app/Kelp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kelp/Kelp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KelpTests/KelpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CACAA87E18DBF4E800DDBDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Kelp.app/Kelp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Kelp/Kelp-Prefix.pch";
+				INFOPLIST_FILE = "KelpTests/KelpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CACAA84818DBF4E800DDBDCD /* Build configuration list for PBXProject "Kelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACAA87718DBF4E800DDBDCD /* Debug */,
+				CACAA87818DBF4E800DDBDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CACAA87918DBF4E800DDBDCD /* Build configuration list for PBXNativeTarget "Kelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACAA87A18DBF4E800DDBDCD /* Debug */,
+				CACAA87B18DBF4E800DDBDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CACAA87C18DBF4E800DDBDCD /* Build configuration list for PBXNativeTarget "KelpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACAA87D18DBF4E800DDBDCD /* Debug */,
+				CACAA87E18DBF4E800DDBDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CACAA84518DBF4E800DDBDCD /* Project object */;
+}
