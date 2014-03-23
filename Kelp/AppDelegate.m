@@ -7,16 +7,43 @@
 //
 
 #import "AppDelegate.h"
+#import "BusinessListViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
     // Override point for customization after application launch.
+	BusinessListViewController *businessListViewController = [[BusinessListViewController alloc] init];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:businessListViewController];
+	self.window.rootViewController = navController;
+	
+	// Use UIAppearance proxy to style all UIBarButtonItems in application.
+	NSDictionary *barButtonAppearanceDict = @{ NSFontAttributeName : [UIFont fontWithName:@"AvenirNext-Medium" size:20.0] };
+	[[UIBarButtonItem appearance] setTitleTextAttributes:barButtonAppearanceDict forState:UIControlStateNormal];
+	[[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(-1.0, -1.5) forBarMetrics:UIBarMetricsDefault];
+	//	[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:<#(UIOffset)#> forBarMetrics:<#(UIBarMetrics)#>
+	
+	[businessListViewController setNeedsStatusBarAppearanceUpdate];
+	
+	/*
+	// Dump font families/names
+	for (NSString* family in [UIFont familyNames]) {
+		NSLog(@"%@", family);
+		for (NSString* name in [UIFont fontNamesForFamilyName: family]) {
+			NSLog(@"  %@", name);
+		}
+	}
+	*/
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
