@@ -23,6 +23,9 @@
 {
 	YelpClient *yelpClient;
 	NSMutableArray *currentBusinessModels;
+	UISearchBar *searchBar;
+	UITapGestureRecognizer *searchDismissGestureRecognizer;
+	BusinessListViewCell *_cellForMetrics;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,7 +57,7 @@
 	self.navigationItem.leftBarButtonItem = leftButton;
 	
 	// UISearchBar setup
-	UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(54, 6, 212, 32)];
+	searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(54, 6, 212, 32)];
 	searchBar.showsCancelButton = NO;
 	[self.navigationController.navigationBar addSubview:searchBar];
 	searchBar.delegate = self;
@@ -62,6 +65,10 @@
 	
 	// Init Yelp service layer
 	yelpClient = [[YelpClient alloc] initWithConsumerKey:YELP_CONSUMER_KEY consumerSecret:YELP_CONSUMER_SECRET accessToken:YELP_TOKEN accessSecret:YELP_TOKEN_SECRET];
+	
+	// Create and initialize a tap gesture
+	searchDismissGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapped:)];
+	searchDismissGestureRecognizer.numberOfTapsRequired = 1;
 	
 	[self executeSearchWithQuery:@"japanese"];
 }
@@ -87,7 +94,23 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 90;
+	// TODO: set cell height based on textfields
+	// http://stackoverflow.com/questions/9181368/ios-dynamic-sizing-labels
+	
+	if (!currentBusinessModels || [currentBusinessModels count] == 0) { return 90; }
+	return [[self cellForMetrics] calcHeightWithModel:currentBusinessModels[[indexPath row]]];
+	
+//	return 90;
+}
+
+/**
+ * Generate a cell to populate with data and measure.
+ */
+- (BusinessListViewCell *) cellForMetrics {
+	if (!_cellForMetrics) {
+		_cellForMetrics = [self.tableView dequeueReusableCellWithIdentifier:@"BusinessListViewCell"];
+	}
+	return _cellForMetrics;
 }
 
 #pragma mark - UI and UISearchBarDelegate protocol implementation
@@ -95,9 +118,23 @@
 	NSLog(@"filter button pressed");
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+- (void)onTapped:(UITapGestureRecognizer *)gesture {
+	// Dismiss search bar keyboard if open.
+	[searchBar resignFirstResponder];
+	[self.tableView removeGestureRecognizer:searchDismissGestureRecognizer];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+	// Add tap recognizer on view to dismiss keyboard
+	[self.tableView addGestureRecognizer:searchDismissGestureRecognizer];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)bar {
 	[self executeSearchWithQuery:searchBar.text];
 	[searchBar resignFirstResponder];
+	
+	// Remove tap recognizer on view to dismiss keyboard
+	[self.tableView removeGestureRecognizer:searchDismissGestureRecognizer];
 }
 
 - (void)executeSearchWithQuery:(NSString *)query {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		99E4A15A576D4B4C88B82CC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6758F6AD93444EF084373BAB /* libPods.a */; };
+		CAC9595818DFEB4C000141E1 /* BusinessListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */; };
+		CAC9595918DFEB4C000141E1 /* BusinessListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */; };
 		CACAA85118DBF4E800DDBDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85018DBF4E800DDBDCD /* Foundation.framework */; };
 		CACAA85318DBF4E800DDBDCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */; };
 		CACAA85518DBF4E800DDBDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85418DBF4E800DDBDCD /* UIKit.framework */; };
@@ -23,8 +25,6 @@
 		CACAA88218DBF51C00DDBDCD /* BusinessListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA88018DBF51C00DDBDCD /* BusinessListViewController.m */; };
 		CACAA88318DBF51C00DDBDCD /* BusinessListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACAA88118DBF51C00DDBDCD /* BusinessListViewController.xib */; };
 		CACAA88C18DBF61B00DDBDCD /* BusinessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA88B18DBF61B00DDBDCD /* BusinessModel.m */; };
-		CACAA89018DBF72400DDBDCD /* BusinessListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA88E18DBF72400DDBDCD /* BusinessListViewCell.m */; };
-		CACAA89118DBF72400DDBDCD /* BusinessListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACAA88F18DBF72400DDBDCD /* BusinessListViewCell.xib */; };
 		CACAA89618DC063A00DDBDCD /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CACAA89418DC063A00DDBDCD /* star.png */; };
 		CACAA89718DC063A00DDBDCD /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACAA89518DC063A00DDBDCD /* star@2x.png */; };
 		CACAA89A18DE328400DDBDCD /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CACAA89918DE328400DDBDCD /* YelpClient.m */; };
@@ -43,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		6758F6AD93444EF084373BAB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC9595518DFEB4C000141E1 /* BusinessListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessListViewCell.h; path = Kelp/BusinessListViewCell.h; sourceTree = "<group>"; };
+		CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessListViewCell.m; path = Kelp/BusinessListViewCell.m; sourceTree = "<group>"; };
+		CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BusinessListViewCell.xib; path = Kelp/BusinessListViewCell.xib; sourceTree = "<group>"; };
 		CACAA84D18DBF4E800DDBDCD /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACAA85018DBF4E800DDBDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +67,6 @@
 		CACAA88118DBF51C00DDBDCD /* BusinessListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessListViewController.xib; sourceTree = "<group>"; };
 		CACAA88A18DBF61B00DDBDCD /* BusinessModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessModel.h; sourceTree = "<group>"; };
 		CACAA88B18DBF61B00DDBDCD /* BusinessModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessModel.m; sourceTree = "<group>"; };
-		CACAA88D18DBF72400DDBDCD /* BusinessListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessListViewCell.h; sourceTree = "<group>"; };
-		CACAA88E18DBF72400DDBDCD /* BusinessListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessListViewCell.m; sourceTree = "<group>"; };
-		CACAA88F18DBF72400DDBDCD /* BusinessListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessListViewCell.xib; sourceTree = "<group>"; };
 		CACAA89418DC063A00DDBDCD /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = resources/star.png; sourceTree = "<group>"; };
 		CACAA89518DC063A00DDBDCD /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "resources/star@2x.png"; sourceTree = "<group>"; };
 		CACAA89818DE328400DDBDCD /* YelpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpClient.h; sourceTree = "<group>"; };
@@ -195,9 +195,9 @@
 		CACAA88518DBF52C00DDBDCD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CACAA88D18DBF72400DDBDCD /* BusinessListViewCell.h */,
-				CACAA88E18DBF72400DDBDCD /* BusinessListViewCell.m */,
-				CACAA88F18DBF72400DDBDCD /* BusinessListViewCell.xib */,
+				CAC9595518DFEB4C000141E1 /* BusinessListViewCell.h */,
+				CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */,
+				CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */,
 			);
 			name = view;
 			path = ..;
@@ -307,10 +307,10 @@
 			files = (
 				CACAA89718DC063A00DDBDCD /* star@2x.png in Resources */,
 				CACAA85B18DBF4E800DDBDCD /* InfoPlist.strings in Resources */,
+				CAC9595918DFEB4C000141E1 /* BusinessListViewCell.xib in Resources */,
 				CACAA89618DC063A00DDBDCD /* star.png in Resources */,
 				CACAA86318DBF4E800DDBDCD /* Images.xcassets in Resources */,
 				CACAA88318DBF51C00DDBDCD /* BusinessListViewController.xib in Resources */,
-				CACAA89118DBF72400DDBDCD /* BusinessListViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +366,7 @@
 				CACAA88218DBF51C00DDBDCD /* BusinessListViewController.m in Sources */,
 				CACAA89A18DE328400DDBDCD /* YelpClient.m in Sources */,
 				CACAA85D18DBF4E800DDBDCD /* main.m in Sources */,
-				CACAA89018DBF72400DDBDCD /* BusinessListViewCell.m in Sources */,
+				CAC9595818DFEB4C000141E1 /* BusinessListViewCell.m in Sources */,
 				CACAA89D18DE372E00DDBDCD /* Constants.m in Sources */,
 				CACAA88C18DBF61B00DDBDCD /* BusinessModel.m in Sources */,
 			);

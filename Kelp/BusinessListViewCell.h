@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
 - (void)initWithModel:(BusinessModel *)model;
+- (CGFloat)calcHeightWithModel:(BusinessModel *)model;
 
 @end

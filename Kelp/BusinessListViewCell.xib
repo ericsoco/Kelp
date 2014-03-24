@@ -21,39 +21,57 @@
                             <constraint firstAttribute="width" constant="72" id="THr-Tc-tr6"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Business Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-K6-I2T">
-                        <rect key="frame" x="89" y="9" width="211" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="221" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-K6-I2T">
+                        <rect key="frame" x="90" y="8" width="221" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="## Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAs-ir-MfK">
-                        <rect key="frame" x="179" y="29" width="121" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="## Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAs-ir-MfK">
+                        <rect key="frame" x="180" y="31" width="131" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1234 Main St, Tastyhood" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-Lq-nye">
-                        <rect key="frame" x="89" y="47" width="211" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Main St, Tastyhood" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="221" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-Lq-nye">
+                        <rect key="frame" x="90" y="48" width="221" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-Q8-WI6">
-                        <rect key="frame" x="89" y="62" width="211" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="221" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-Q8-WI6">
+                        <rect key="frame" x="90" y="64" width="221" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPj-9O-VX4">
-                        <rect key="frame" x="89" y="32" width="84" height="17"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPj-9O-VX4">
+                        <rect key="frame" x="90" y="31" width="84" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="Y2j-sr-qEe"/>
+                            <constraint firstAttribute="height" constant="17" id="c5v-Xg-LGm"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="qX4-Lq-nye" firstAttribute="leading" secondItem="dUH-Q8-WI6" secondAttribute="leading" id="0eh-vH-jo4"/>
+                    <constraint firstItem="Ic8-K6-I2T" firstAttribute="top" secondItem="mCe-Tj-NKx" secondAttribute="top" constant="-1" id="5Jr-mR-Lbk"/>
+                    <constraint firstItem="qX4-Lq-nye" firstAttribute="leading" secondItem="dPj-9O-VX4" secondAttribute="leading" id="6ev-Mj-stS"/>
+                    <constraint firstItem="dPj-9O-VX4" firstAttribute="centerY" secondItem="DAs-ir-MfK" secondAttribute="centerY" constant="-0.5" id="7Nf-n7-Ulm"/>
+                    <constraint firstItem="DAs-ir-MfK" firstAttribute="leading" secondItem="dPj-9O-VX4" secondAttribute="trailing" constant="6" id="N3H-Wj-aqg"/>
+                    <constraint firstItem="Ic8-K6-I2T" firstAttribute="leading" secondItem="mCe-Tj-NKx" secondAttribute="trailing" constant="9" id="NuK-WM-mmy"/>
                     <constraint firstItem="mCe-Tj-NKx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="OIE-xC-DYV"/>
+                    <constraint firstItem="qX4-Lq-nye" firstAttribute="leading" secondItem="Ic8-K6-I2T" secondAttribute="leading" id="TfQ-40-dAa"/>
+                    <constraint firstItem="Ic8-K6-I2T" firstAttribute="trailing" secondItem="qX4-Lq-nye" secondAttribute="trailing" id="TiE-aA-HzG"/>
+                    <constraint firstAttribute="trailing" secondItem="Ic8-K6-I2T" secondAttribute="trailing" constant="9" id="hH7-B2-U8c"/>
+                    <constraint firstAttribute="bottom" secondItem="dUH-Q8-WI6" secondAttribute="bottom" constant="7" id="ifP-l1-SFP"/>
+                    <constraint firstItem="Ic8-K6-I2T" firstAttribute="trailing" secondItem="dUH-Q8-WI6" secondAttribute="trailing" id="lv4-4y-Z0L"/>
+                    <constraint firstItem="Ic8-K6-I2T" firstAttribute="trailing" secondItem="DAs-ir-MfK" secondAttribute="trailing" id="oCP-dV-KSR"/>
+                    <constraint firstItem="dPj-9O-VX4" firstAttribute="top" secondItem="Ic8-K6-I2T" secondAttribute="bottom" constant="1" id="or6-bg-XFy"/>
                     <constraint firstItem="mCe-Tj-NKx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="uc9-wv-Kzn"/>
+                    <constraint firstItem="qX4-Lq-nye" firstAttribute="top" secondItem="dPj-9O-VX4" secondAttribute="bottom" id="v4j-cj-Oz0"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
