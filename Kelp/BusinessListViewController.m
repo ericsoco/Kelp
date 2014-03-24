@@ -12,6 +12,7 @@
 #import "YelpClient.h"
 #import "Constants.h"
 #import "ZAActivityBar.h"
+#import "FilterTableViewController.h"
 
 @interface BusinessListViewController ()
 
@@ -20,13 +21,12 @@
 @end
 
 @implementation BusinessListViewController
-{
-	YelpClient *yelpClient;
-	NSMutableArray *currentBusinessModels;
-	UISearchBar *searchBar;
-	UITapGestureRecognizer *searchDismissGestureRecognizer;
-	BusinessListViewCell *_cellForMetrics;
-}
+
+YelpClient *yelpClient;
+NSMutableArray *currentBusinessModels;
+UISearchBar *searchBar;
+UITapGestureRecognizer *searchDismissGestureRecognizer;
+BusinessListViewCell *_cellForMetrics;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,10 +48,6 @@
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"BusinessListViewCell"];
 	
 	// UINavigationBar setup
-	[self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.812 green:0.094 blue:0.024 alpha:1.0]];
-	[self.navigationController.navigationBar setTranslucent:YES];
-	[self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-	
 	UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStylePlain target:self action:@selector(filterPressed)];
 	[leftButton setTintColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
 	self.navigationItem.leftBarButtonItem = leftButton;
@@ -59,9 +55,7 @@
 	// UISearchBar setup
 	searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(54, 6, 212, 32)];
 	searchBar.showsCancelButton = NO;
-	[self.navigationController.navigationBar addSubview:searchBar];
 	searchBar.delegate = self;
-//	searchBar.placeholder = @"Search for local businesses";
 	
 	// Init Yelp service layer
 	yelpClient = [[YelpClient alloc] initWithConsumerKey:YELP_CONSUMER_KEY consumerSecret:YELP_CONSUMER_SECRET accessToken:YELP_TOKEN accessSecret:YELP_TOKEN_SECRET];
@@ -80,6 +74,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	[self.navigationController.navigationBar addSubview:searchBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[searchBar removeFromSuperview];
+}
+
 #pragma mark - UITableView protocol implementation
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return currentBusinessModels ? [currentBusinessModels count] : 0;
@@ -94,13 +96,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	// TODO: set cell height based on textfields
-	// http://stackoverflow.com/questions/9181368/ios-dynamic-sizing-labels
-	
 	if (!currentBusinessModels || [currentBusinessModels count] == 0) { return 90; }
 	return [[self cellForMetrics] calcHeightWithModel:currentBusinessModels[[indexPath row]]];
-	
-//	return 90;
 }
 
 /**
@@ -115,7 +112,7 @@
 
 #pragma mark - UI and UISearchBarDelegate protocol implementation
 - (void)filterPressed {
-	NSLog(@"filter button pressed");
+	[self.navigationController pushViewController:[[FilterTableViewController alloc] init] animated:YES];
 }
 
 - (void)onTapped:(UITapGestureRecognizer *)gesture {

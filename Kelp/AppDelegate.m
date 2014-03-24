@@ -20,8 +20,12 @@
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:businessListViewController];
 	self.window.rootViewController = navController;
 	
+	[navController.navigationBar setBarTintColor:[UIColor colorWithRed:0.812 green:0.094 blue:0.024 alpha:1.0]];
+	[navController.navigationBar setTranslucent:YES];
+	[navController.navigationBar setBarStyle:UIBarStyleBlack];
+	
 	// Use UIAppearance proxy to style all UIBarButtonItems in application.
-	NSDictionary *barButtonAppearanceDict = @{ NSFontAttributeName : [UIFont fontWithName:@"AvenirNext-Medium" size:20.0] };
+	NSDictionary *barButtonAppearanceDict = @{ NSFontAttributeName : [UIFont fontWithName:@"Avenir-Medium" size:20.0] };
 	[[UIBarButtonItem appearance] setTitleTextAttributes:barButtonAppearanceDict forState:UIControlStateNormal];
 	[[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(-1.0, -1.5) forBarMetrics:UIBarMetricsDefault];
 	//	[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:<#(UIOffset)#> forBarMetrics:<#(UIBarMetrics)#>
@@ -37,6 +41,7 @@
 		}
 	}
 	*/
+	
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

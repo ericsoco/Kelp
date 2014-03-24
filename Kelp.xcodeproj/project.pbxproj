@@ -10,6 +10,14 @@
 		99E4A15A576D4B4C88B82CC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6758F6AD93444EF084373BAB /* libPods.a */; };
 		CAC9595818DFEB4C000141E1 /* BusinessListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */; };
 		CAC9595918DFEB4C000141E1 /* BusinessListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */; };
+		CAC9595D18DFEC93000141E1 /* FilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9595B18DFEC93000141E1 /* FilterTableViewController.m */; };
+		CAC9595E18DFEC93000141E1 /* FilterTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9595C18DFEC93000141E1 /* FilterTableViewController.xib */; };
+		CAC9596218DFECFF000141E1 /* PriceFilterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9596018DFECFF000141E1 /* PriceFilterViewCell.m */; };
+		CAC9596318DFECFF000141E1 /* PriceFilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9596118DFECFF000141E1 /* PriceFilterViewCell.xib */; };
+		CAC9596718DFEFE6000141E1 /* PopularFilterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9596518DFEFE6000141E1 /* PopularFilterViewCell.m */; };
+		CAC9596818DFEFE6000141E1 /* PopularFilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9596618DFEFE6000141E1 /* PopularFilterViewCell.xib */; };
+		CAC9596C18DFFB6A000141E1 /* SortFilterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */; };
+		CAC9596D18DFFB6A000141E1 /* SortFilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */; };
 		CACAA85118DBF4E800DDBDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85018DBF4E800DDBDCD /* Foundation.framework */; };
 		CACAA85318DBF4E800DDBDCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */; };
 		CACAA85518DBF4E800DDBDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85418DBF4E800DDBDCD /* UIKit.framework */; };
@@ -43,9 +51,21 @@
 
 /* Begin PBXFileReference section */
 		6758F6AD93444EF084373BAB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAC9595518DFEB4C000141E1 /* BusinessListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessListViewCell.h; path = Kelp/BusinessListViewCell.h; sourceTree = "<group>"; };
-		CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessListViewCell.m; path = Kelp/BusinessListViewCell.m; sourceTree = "<group>"; };
-		CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BusinessListViewCell.xib; path = Kelp/BusinessListViewCell.xib; sourceTree = "<group>"; };
+		CAC9595518DFEB4C000141E1 /* BusinessListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessListViewCell.h; sourceTree = "<group>"; };
+		CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessListViewCell.m; sourceTree = "<group>"; };
+		CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessListViewCell.xib; sourceTree = "<group>"; };
+		CAC9595A18DFEC93000141E1 /* FilterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterTableViewController.h; sourceTree = "<group>"; };
+		CAC9595B18DFEC93000141E1 /* FilterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterTableViewController.m; sourceTree = "<group>"; };
+		CAC9595C18DFEC93000141E1 /* FilterTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterTableViewController.xib; sourceTree = "<group>"; };
+		CAC9595F18DFECFF000141E1 /* PriceFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceFilterViewCell.h; sourceTree = "<group>"; };
+		CAC9596018DFECFF000141E1 /* PriceFilterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceFilterViewCell.m; sourceTree = "<group>"; };
+		CAC9596118DFECFF000141E1 /* PriceFilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceFilterViewCell.xib; sourceTree = "<group>"; };
+		CAC9596418DFEFE6000141E1 /* PopularFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularFilterViewCell.h; sourceTree = "<group>"; };
+		CAC9596518DFEFE6000141E1 /* PopularFilterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularFilterViewCell.m; sourceTree = "<group>"; };
+		CAC9596618DFEFE6000141E1 /* PopularFilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularFilterViewCell.xib; sourceTree = "<group>"; };
+		CAC9596918DFFB6A000141E1 /* SortFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortFilterViewCell.h; sourceTree = "<group>"; };
+		CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortFilterViewCell.m; sourceTree = "<group>"; };
+		CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortFilterViewCell.xib; sourceTree = "<group>"; };
 		CACAA84D18DBF4E800DDBDCD /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACAA85018DBF4E800DDBDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -188,6 +208,9 @@
 				CACAA87F18DBF51C00DDBDCD /* BusinessListViewController.h */,
 				CACAA88018DBF51C00DDBDCD /* BusinessListViewController.m */,
 				CACAA88118DBF51C00DDBDCD /* BusinessListViewController.xib */,
+				CAC9595A18DFEC93000141E1 /* FilterTableViewController.h */,
+				CAC9595B18DFEC93000141E1 /* FilterTableViewController.m */,
+				CAC9595C18DFEC93000141E1 /* FilterTableViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -198,10 +221,19 @@
 				CAC9595518DFEB4C000141E1 /* BusinessListViewCell.h */,
 				CAC9595618DFEB4C000141E1 /* BusinessListViewCell.m */,
 				CAC9595718DFEB4C000141E1 /* BusinessListViewCell.xib */,
+				CAC9595F18DFECFF000141E1 /* PriceFilterViewCell.h */,
+				CAC9596018DFECFF000141E1 /* PriceFilterViewCell.m */,
+				CAC9596118DFECFF000141E1 /* PriceFilterViewCell.xib */,
+				CAC9596418DFEFE6000141E1 /* PopularFilterViewCell.h */,
+				CAC9596518DFEFE6000141E1 /* PopularFilterViewCell.m */,
+				CAC9596618DFEFE6000141E1 /* PopularFilterViewCell.xib */,
+				CAC9596918DFFB6A000141E1 /* SortFilterViewCell.h */,
+				CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */,
+				CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */,
 			);
 			name = view;
-			path = ..;
-			sourceTree = "<group>";
+			path = /Users/ericsoco/Documents/lab/iOS_Codepath/projects/Kelp/Kelp;
+			sourceTree = "<absolute>";
 		};
 		CACAA88618DBF53300DDBDCD /* model */ = {
 			isa = PBXGroup;
@@ -308,8 +340,12 @@
 				CACAA89718DC063A00DDBDCD /* star@2x.png in Resources */,
 				CACAA85B18DBF4E800DDBDCD /* InfoPlist.strings in Resources */,
 				CAC9595918DFEB4C000141E1 /* BusinessListViewCell.xib in Resources */,
+				CAC9596818DFEFE6000141E1 /* PopularFilterViewCell.xib in Resources */,
+				CAC9596D18DFFB6A000141E1 /* SortFilterViewCell.xib in Resources */,
 				CACAA89618DC063A00DDBDCD /* star.png in Resources */,
+				CAC9596318DFECFF000141E1 /* PriceFilterViewCell.xib in Resources */,
 				CACAA86318DBF4E800DDBDCD /* Images.xcassets in Resources */,
+				CAC9595E18DFEC93000141E1 /* FilterTableViewController.xib in Resources */,
 				CACAA88318DBF51C00DDBDCD /* BusinessListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,9 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACAA86118DBF4E800DDBDCD /* AppDelegate.m in Sources */,
+				CAC9596C18DFFB6A000141E1 /* SortFilterViewCell.m in Sources */,
 				CACAA88218DBF51C00DDBDCD /* BusinessListViewController.m in Sources */,
+				CAC9596218DFECFF000141E1 /* PriceFilterViewCell.m in Sources */,
 				CACAA89A18DE328400DDBDCD /* YelpClient.m in Sources */,
+				CAC9595D18DFEC93000141E1 /* FilterTableViewController.m in Sources */,
 				CACAA85D18DBF4E800DDBDCD /* main.m in Sources */,
+				CAC9596718DFEFE6000141E1 /* PopularFilterViewCell.m in Sources */,
 				CAC9595818DFEB4C000141E1 /* BusinessListViewCell.m in Sources */,
 				CACAA89D18DE372E00DDBDCD /* Constants.m in Sources */,
 				CACAA88C18DBF61B00DDBDCD /* BusinessModel.m in Sources */,

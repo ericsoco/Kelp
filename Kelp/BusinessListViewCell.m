@@ -13,8 +13,12 @@
 
 @implementation BusinessListViewCell
 {
-	
+
 }
+
+static NSDictionary *nameLabelAttrs;
+static NSDictionary *addressLabelAttrs;
+static NSDictionary *categoryLabelAttrs;
 
 - (void)awakeFromNib
 {
@@ -58,20 +62,9 @@
 										*/
 									}
 									failure:NULL];
-	
-	
-	/*
-	 // Manually size UILabels. Doesn't seem necessary.
-	 CGRect newFrame = yourLabel.frame;
-	 newFrame.size.height = calcSize.height;
-	 yourLabel.frame = newFrame;
-	 */
 }
 
 - (CGFloat)calcHeightWithModel:(BusinessModel *)model {
-	
-	double cellHeight = 0.0;
-	CGSize minSize = CGSizeMake(320, 90);
 	
 	// -- sizeWithFont:... is deprecated, but I don't know how to specify leading (line spacing) without it.
 	// Something about NSParagraphStyle...
@@ -81,11 +74,7 @@
 									 NSParagraphStyleAttributeName: self.nameLabel.
 									 };
 	CGSize calcSize = [model.name sizeWithAttributes:nameLabelAttrs];
-	*/
-	
-	// -- This gives me the correct height of each UILabel, but I need to calculate the whitespace too...
-	/*
-	CGSize maxSize = CGSizeMake(211, 9999);
+	 
 	cellHeight += [model.name sizeWithFont:self.nameLabel.font constrainedToSize:maxSize lineBreakMode:self.nameLabel.lineBreakMode].height;
 	cellHeight += [model.locationString sizeWithFont:self.addressLabel.font constrainedToSize:maxSize lineBreakMode:self.addressLabel.lineBreakMode].height;
 	cellHeight += [model.categories sizeWithFont:self.categoryLabel.font constrainedToSize:maxSize lineBreakMode:self.categoryLabel.lineBreakMode].height;
@@ -102,8 +91,23 @@
 	cellHeight = [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 	*/
 	
+	// Set up UILabel attribute hashes only once
+	if (!nameLabelAttrs) {
+		nameLabelAttrs = @{ NSFontAttributeName: self.nameLabel.font };
+		addressLabelAttrs = @{ NSFontAttributeName: self.addressLabel.font };
+		categoryLabelAttrs = @{ NSFontAttributeName: self.categoryLabel.font };
+	}
 	
-//	NSLog(@"calculated cell height:%f", cellHeight);
+	// Hardcoded height of all whitespace created in xib.
+	double cellHeight = 32.0;
+	
+	CGSize minSize = CGSizeMake(211, 90);
+	CGSize maxSize = CGSizeMake(211, 0);
+	
+	cellHeight += [model.name boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:nameLabelAttrs context:nil].size.height;
+	cellHeight += [model.locationString boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:addressLabelAttrs context:nil].size.height;
+	cellHeight += [model.categories boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:categoryLabelAttrs context:nil].size.height;
+	
 	cellHeight = MAX(minSize.height, cellHeight);
 	
 	return cellHeight;
