@@ -10,6 +10,8 @@
 #import "PriceFilterViewCell.h"
 #import "PopularFilterViewCell.h"
 #import "SortFilterViewCell.h"
+#import "MenuDisclosureViewCell.h"
+#import "NumericFilterViewCell.h"
 
 @interface FilterTableViewController ()
 
@@ -30,6 +32,9 @@ NSArray *sortTitles;
 		popularTitles = @[@"Open Now", @"Hot & New", @"Offering A Deal", @"Delivery"];
 		sortTitles = @[@"Best Match", @"Distance", @"Rating", @"Most Reviewed"];
     }
+	
+	self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+	
     return self;
 }
 
@@ -40,12 +45,17 @@ NSArray *sortTitles;
     // UITableView setup
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+	
+	// Register cell nibs
 	UINib *cellNib = [UINib nibWithNibName:@"PriceFilterViewCell" bundle:nil];
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"PriceFilterViewCell"];
 	cellNib = [UINib nibWithNibName:@"PopularFilterViewCell" bundle:nil];
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"PopularFilterViewCell"];
 	cellNib = [UINib nibWithNibName:@"SortFilterViewCell" bundle:nil];
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"SortFilterViewCell"];
+	cellNib = [UINib nibWithNibName:@"MenuDisclosureViewCell" bundle:nil];
+	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"MenuDisclosureViewCell"];
 	
 	// UINavigationController setup
 //	self.navigationController.title = @"Filters";
@@ -55,6 +65,14 @@ NSArray *sortTitles;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+//	NSLog(@"FilterModel:%@", _filterModel);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+//	NSLog(@"FilterModel:%@", _filterModel);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -85,33 +103,118 @@ NSArray *sortTitles;
 		case 1:
 			return 4;
 		case 2:
-			// TODO: if expanded...
-			return 4;
+			return sortExpanded ? 4 : 1;
 		default:
 			return 0;
 	}
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell;
+	UITableViewCell <NumericFilterViewCell> *cell;
 	
 	switch (indexPath.section) {
+		
+		// Price
 		case 0:
 			cell = [tableView dequeueReusableCellWithIdentifier:@"PriceFilterViewCell" forIndexPath:indexPath];
+			cell.modelValue = _filterModel.price;
 			break;
+		
+		// Popular
 		case 1:
 			cell = [tableView dequeueReusableCellWithIdentifier:@"PopularFilterViewCell" forIndexPath:indexPath];
 			((PopularFilterViewCell *)cell).titleLabel.text = popularTitles[indexPath.row];
+			
+			// Map model data to view.
+			switch (indexPath.row) {
+				case 0:
+					cell.modelValue = _filterModel.openNow;
+					break;
+				case 1:
+					cell.modelValue = _filterModel.hotAndNew;
+					break;
+				case 2:
+					cell.modelValue = _filterModel.offeringADeal;
+					break;
+				case 3:
+					cell.modelValue = _filterModel.delivery;
+					break;
+			}
 			break;
+			
+		// Sort
 		case 2:
-			cell = [tableView dequeueReusableCellWithIdentifier:@"SortFilterViewCell" forIndexPath:indexPath];
-			((SortFilterViewCell *)cell).titleLabel.text = sortTitles[indexPath.row];
+			if (!sortExpanded) {
+				cell = [tableView dequeueReusableCellWithIdentifier:@"MenuDisclosureViewCell" forIndexPath:indexPath];
+				((MenuDisclosureViewCell *)cell).titleLabel.text = sortTitles[indexPath.row];
+			} else {
+				cell = [tableView dequeueReusableCellWithIdentifier:@"SortFilterViewCell" forIndexPath:indexPath];
+				((SortFilterViewCell *)cell).titleLabel.text = sortTitles[indexPath.row];
+				
+				// Map model data to view.
+				switch (indexPath.row) {
+					case 0:
+						cell.modelValue = _filterModel.bestMatch;
+						break;
+					case 1:
+						cell.modelValue = _filterModel.distance;
+						break;
+					case 2:
+						cell.modelValue = _filterModel.rating;
+						break;
+					case 3:
+						cell.modelValue = _filterModel.mostReviewed;
+						break;
+				}
+			}
+			
 			break;
+					
 		default:
 			return nil;
 	}
 	
 	return cell;
+}
+/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	switch (indexPath.section) {
+		case 0:
+			return 50;
+		case 1:
+			return 50;
+		case 2:
+			return 50;
+		default:
+			return 100;
+	}
+}
+*/
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.section == 2) {
+		sortExpanded = !sortExpanded;
+		NSArray *indexPaths;
+		[self.tableView beginUpdates];
+		if (!sortExpanded) {
+			// contract
+			indexPaths = [NSArray arrayWithObjects:
+						  [NSIndexPath indexPathForRow:1 inSection:indexPath.section],
+						  [NSIndexPath indexPathForRow:2 inSection:indexPath.section],
+						  [NSIndexPath indexPathForRow:3 inSection:indexPath.section],
+						  nil];
+			[self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+		} else {
+			// expand
+			indexPaths = [NSArray arrayWithObjects:
+						  [NSIndexPath indexPathForRow:1 inSection:indexPath.section],
+						  [NSIndexPath indexPathForRow:2 inSection:indexPath.section],
+						  [NSIndexPath indexPathForRow:3 inSection:indexPath.section],
+						  nil];
+			[self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+		}
+		[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]] withRowAnimation:UITableViewRowAnimationAutomatic];
+		[self.tableView endUpdates];
+	}
 }
 
 @end

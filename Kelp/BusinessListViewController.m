@@ -13,6 +13,7 @@
 #import "Constants.h"
 #import "ZAActivityBar.h"
 #import "FilterTableViewController.h"
+#import "FilterModel.h"
 
 @interface BusinessListViewController ()
 
@@ -27,6 +28,8 @@ NSMutableArray *currentBusinessModels;
 UISearchBar *searchBar;
 UITapGestureRecognizer *searchDismissGestureRecognizer;
 BusinessListViewCell *_cellForMetrics;
+FilterTableViewController *_filterTableViewController;
+FilterModel *_filterModel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +47,9 @@ BusinessListViewCell *_cellForMetrics;
     // UITableView setup
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+	
+	// Register cell nibs
 	UINib *cellNib = [UINib nibWithNibName:@"BusinessListViewCell" bundle:nil];
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"BusinessListViewCell"];
 	
@@ -63,6 +69,10 @@ BusinessListViewCell *_cellForMetrics;
 	// Create and initialize a tap gesture
 	searchDismissGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapped:)];
 	searchDismissGestureRecognizer.numberOfTapsRequired = 1;
+	
+	_filterTableViewController = [[FilterTableViewController alloc] init];
+	_filterModel = [[FilterModel alloc] init];
+	_filterTableViewController.filterModel = _filterModel;
 	
 	[self executeSearchWithQuery:@"japanese"];
 }
@@ -112,7 +122,7 @@ BusinessListViewCell *_cellForMetrics;
 
 #pragma mark - UI and UISearchBarDelegate protocol implementation
 - (void)filterPressed {
-	[self.navigationController pushViewController:[[FilterTableViewController alloc] init] animated:YES];
+	[self.navigationController pushViewController:_filterTableViewController animated:YES];
 }
 
 - (void)onTapped:(UITapGestureRecognizer *)gesture {
@@ -135,7 +145,7 @@ BusinessListViewCell *_cellForMetrics;
 }
 
 - (void)executeSearchWithQuery:(NSString *)query {
-	// TODO: check filters
+//	NSLog(@"TODO: Apply FilterModel to query:%@", _filterModel);
 	
 //	[ZAActivityBar showWithStatus:@"Searching local businesses..."];
 	

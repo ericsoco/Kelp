@@ -18,6 +18,9 @@
 		CAC9596818DFEFE6000141E1 /* PopularFilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9596618DFEFE6000141E1 /* PopularFilterViewCell.xib */; };
 		CAC9596C18DFFB6A000141E1 /* SortFilterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */; };
 		CAC9596D18DFFB6A000141E1 /* SortFilterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */; };
+		CAC9597018E11C9A000141E1 /* FilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9596F18E11C9A000141E1 /* FilterModel.m */; };
+		CAC9597718E157F1000141E1 /* MenuDisclosureViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC9597518E157F1000141E1 /* MenuDisclosureViewCell.m */; };
+		CAC9597818E157F1000141E1 /* MenuDisclosureViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC9597618E157F1000141E1 /* MenuDisclosureViewCell.xib */; };
 		CACAA85118DBF4E800DDBDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85018DBF4E800DDBDCD /* Foundation.framework */; };
 		CACAA85318DBF4E800DDBDCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */; };
 		CACAA85518DBF4E800DDBDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACAA85418DBF4E800DDBDCD /* UIKit.framework */; };
@@ -66,6 +69,12 @@
 		CAC9596918DFFB6A000141E1 /* SortFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortFilterViewCell.h; sourceTree = "<group>"; };
 		CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortFilterViewCell.m; sourceTree = "<group>"; };
 		CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortFilterViewCell.xib; sourceTree = "<group>"; };
+		CAC9596E18E11C9A000141E1 /* FilterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterModel.h; sourceTree = "<group>"; };
+		CAC9596F18E11C9A000141E1 /* FilterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterModel.m; sourceTree = "<group>"; };
+		CAC9597118E1474C000141E1 /* NumericFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericFilterViewCell.h; sourceTree = "<group>"; };
+		CAC9597418E157F1000141E1 /* MenuDisclosureViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDisclosureViewCell.h; sourceTree = "<group>"; };
+		CAC9597518E157F1000141E1 /* MenuDisclosureViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDisclosureViewCell.m; sourceTree = "<group>"; };
+		CAC9597618E157F1000141E1 /* MenuDisclosureViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuDisclosureViewCell.xib; sourceTree = "<group>"; };
 		CACAA84D18DBF4E800DDBDCD /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACAA85018DBF4E800DDBDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -230,6 +239,10 @@
 				CAC9596918DFFB6A000141E1 /* SortFilterViewCell.h */,
 				CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */,
 				CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */,
+				CAC9597118E1474C000141E1 /* NumericFilterViewCell.h */,
+				CAC9597418E157F1000141E1 /* MenuDisclosureViewCell.h */,
+				CAC9597518E157F1000141E1 /* MenuDisclosureViewCell.m */,
+				CAC9597618E157F1000141E1 /* MenuDisclosureViewCell.xib */,
 			);
 			name = view;
 			path = /Users/ericsoco/Documents/lab/iOS_Codepath/projects/Kelp/Kelp;
@@ -240,6 +253,8 @@
 			children = (
 				CACAA88A18DBF61B00DDBDCD /* BusinessModel.h */,
 				CACAA88B18DBF61B00DDBDCD /* BusinessModel.m */,
+				CAC9596E18E11C9A000141E1 /* FilterModel.h */,
+				CAC9596F18E11C9A000141E1 /* FilterModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -347,6 +362,7 @@
 				CACAA86318DBF4E800DDBDCD /* Images.xcassets in Resources */,
 				CAC9595E18DFEC93000141E1 /* FilterTableViewController.xib in Resources */,
 				CACAA88318DBF51C00DDBDCD /* BusinessListViewController.xib in Resources */,
+				CAC9597818E157F1000141E1 /* MenuDisclosureViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +417,7 @@
 				CACAA86118DBF4E800DDBDCD /* AppDelegate.m in Sources */,
 				CAC9596C18DFFB6A000141E1 /* SortFilterViewCell.m in Sources */,
 				CACAA88218DBF51C00DDBDCD /* BusinessListViewController.m in Sources */,
+				CAC9597018E11C9A000141E1 /* FilterModel.m in Sources */,
 				CAC9596218DFECFF000141E1 /* PriceFilterViewCell.m in Sources */,
 				CACAA89A18DE328400DDBDCD /* YelpClient.m in Sources */,
 				CAC9595D18DFEC93000141E1 /* FilterTableViewController.m in Sources */,
@@ -409,6 +426,7 @@
 				CAC9595818DFEB4C000141E1 /* BusinessListViewCell.m in Sources */,
 				CACAA89D18DE372E00DDBDCD /* Constants.m in Sources */,
 				CACAA88C18DBF61B00DDBDCD /* BusinessModel.m in Sources */,
+				CAC9597718E157F1000141E1 /* MenuDisclosureViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

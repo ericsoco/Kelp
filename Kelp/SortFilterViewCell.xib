@@ -20,14 +20,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-GD-MbG">
-                        <rect key="frame" x="251" y="6" width="51" height="31"/>
+                        <rect key="frame" x="251" y="7" width="51" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="tintColor" red="0.75045620437956206" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                     </switch>
                 </subviews>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="activeSwitch" destination="dMp-GD-MbG" id="pky-TI-4Pe"/>
                 <outlet property="titleLabel" destination="PBm-fB-nif" id="QR7-mY-0D9"/>
+                <outlet property="valueSwitch" destination="dMp-GD-MbG" id="R3y-ZA-c3a"/>
             </connections>
         </tableViewCell>
     </objects>

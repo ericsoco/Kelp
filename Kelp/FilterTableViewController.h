@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FilterModel.h"
+#import "SortFilterViewCell.h"
 
-@interface FilterTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface FilterTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate/*, SortCellDelegate*/>
+
+@property (strong, nonatomic) FilterModel *filterModel;
 
 @end
