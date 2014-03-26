@@ -245,8 +245,7 @@
 				CAC9597918E27FDF000141E1 /* FilterViewCell.h */,
 			);
 			name = view;
-			path = /Users/ericsoco/Documents/lab/iOS_Codepath/projects/Kelp/Kelp;
-			sourceTree = "<absolute>";
+			sourceTree = "<group>";
 		};
 		CACAA88618DBF53300DDBDCD /* model */ = {
 			isa = PBXGroup;
