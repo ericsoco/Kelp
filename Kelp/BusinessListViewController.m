@@ -30,6 +30,7 @@ UITapGestureRecognizer *searchDismissGestureRecognizer;
 BusinessListViewCell *_cellForMetrics;
 FilterTableViewController *_filterTableViewController;
 FilterModel *_filterModel;
+NSString *currentSearchTerm;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,9 +75,9 @@ FilterModel *_filterModel;
 	_filterModel = [[FilterModel alloc] init];
 	_filterTableViewController.filterModel = _filterModel;
 	
-	[self executeSearchWithQuery:@"japanese"];
+	currentSearchTerm = @"japanese";
+	[self executeSearchWithQuery:currentSearchTerm];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -86,6 +87,11 @@ FilterModel *_filterModel;
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self.navigationController.navigationBar addSubview:searchBar];
+	
+	if (_filterModel.dirty) {
+		// re-execute search if changed in filters view
+		[self executeSearchWithQuery:currentSearchTerm];
+	}
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -122,6 +128,7 @@ FilterModel *_filterModel;
 
 #pragma mark - UI and UISearchBarDelegate protocol implementation
 - (void)filterPressed {
+	_filterModel.dirty = false;
 	[self.navigationController pushViewController:_filterTableViewController animated:YES];
 }
 
@@ -145,7 +152,7 @@ FilterModel *_filterModel;
 }
 
 - (void)executeSearchWithQuery:(NSString *)query {
-//	NSLog(@"TODO: Apply FilterModel to query:%@", _filterModel);
+	NSLog(@"TODO: Apply FilterModel to query:%@", _filterModel);
 	
 //	[ZAActivityBar showWithStatus:@"Searching local businesses..."];
 	

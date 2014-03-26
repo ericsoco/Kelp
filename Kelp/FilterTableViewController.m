@@ -58,7 +58,12 @@ NSArray *sortTitles;
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:@"MenuDisclosureViewCell"];
 	
 	// UINavigationController setup
-//	self.navigationController.title = @"Filters";
+	self.navigationItem.title = @"Filters";
+	UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(searchPressed)];
+	self.navigationItem.rightBarButtonItem = searchButton;
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancelPressed)];
+	self.navigationItem.rightBarButtonItem = searchButton;
+	self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,11 +73,11 @@ NSArray *sortTitles;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	NSLog(@"FilterModel:%@", _filterModel);
+//	NSLog(@"FilterModel:%@", _filterModel);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-	NSLog(@"FilterModel:%@", _filterModel);
+//	NSLog(@"FilterModel:%@", _filterModel);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -215,6 +220,16 @@ NSArray *sortTitles;
 		[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:indexPath.section]] withRowAnimation:UITableViewRowAnimationNone];
 		[self.tableView endUpdates];
 	}
+}
+
+- (void)cancelPressed {
+	_filterModel.dirty = false;
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)searchPressed {
+	_filterModel.dirty = true;
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

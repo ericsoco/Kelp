@@ -20,4 +20,6 @@
 @property (strong, nonatomic) NSNumber *rating;
 @property (strong, nonatomic) NSNumber *mostReviewed;
 
+@property (assign, nonatomic) BOOL dirty;
+
 @end
