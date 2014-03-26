@@ -10,7 +10,8 @@
 
 @implementation SortFilterViewCell
 
-@synthesize modelValue = _modelValue;
+@synthesize filterModel = _filterModel;
+@synthesize filterValueName = _filterValueName;
 
 - (void)awakeFromNib
 {
@@ -25,12 +26,14 @@
     // Configure the view for the selected state
 }
 
-- (void)setModelValue:(NSNumber *)value {
-	self.valueSwitch.on = !!value;
+- (void)setFilterModel:(FilterModel *)model withValueName:(NSString *)name {
+	self.filterModel = model;
+	self.filterValueName = name;
+	self.valueSwitch.on = [[self.filterModel valueForKey:self.filterValueName] boolValue];
 }
 
 - (void)didChangeValue:(id)sender {
-	_modelValue = [NSNumber numberWithBool:self.valueSwitch.isOn];
+	[self.filterModel setValue:[NSNumber numberWithBool:self.valueSwitch.isOn] forKey:self.filterValueName];
 }
 
 @end

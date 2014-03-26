@@ -71,10 +71,10 @@
 		CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SortFilterViewCell.xib; sourceTree = "<group>"; };
 		CAC9596E18E11C9A000141E1 /* FilterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterModel.h; sourceTree = "<group>"; };
 		CAC9596F18E11C9A000141E1 /* FilterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterModel.m; sourceTree = "<group>"; };
-		CAC9597118E1474C000141E1 /* NumericFilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericFilterViewCell.h; sourceTree = "<group>"; };
 		CAC9597418E157F1000141E1 /* MenuDisclosureViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDisclosureViewCell.h; sourceTree = "<group>"; };
 		CAC9597518E157F1000141E1 /* MenuDisclosureViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDisclosureViewCell.m; sourceTree = "<group>"; };
 		CAC9597618E157F1000141E1 /* MenuDisclosureViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuDisclosureViewCell.xib; sourceTree = "<group>"; };
+		CAC9597918E27FDF000141E1 /* FilterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewCell.h; sourceTree = "<group>"; };
 		CACAA84D18DBF4E800DDBDCD /* Kelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACAA85018DBF4E800DDBDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CACAA85218DBF4E800DDBDCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -239,10 +239,10 @@
 				CAC9596918DFFB6A000141E1 /* SortFilterViewCell.h */,
 				CAC9596A18DFFB6A000141E1 /* SortFilterViewCell.m */,
 				CAC9596B18DFFB6A000141E1 /* SortFilterViewCell.xib */,
-				CAC9597118E1474C000141E1 /* NumericFilterViewCell.h */,
 				CAC9597418E157F1000141E1 /* MenuDisclosureViewCell.h */,
 				CAC9597518E157F1000141E1 /* MenuDisclosureViewCell.m */,
 				CAC9597618E157F1000141E1 /* MenuDisclosureViewCell.xib */,
+				CAC9597918E27FDF000141E1 /* FilterViewCell.h */,
 			);
 			name = view;
 			path = /Users/ericsoco/Documents/lab/iOS_Codepath/projects/Kelp/Kelp;

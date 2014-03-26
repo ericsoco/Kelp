@@ -12,14 +12,14 @@
 
 - (id)init {
 	self.price = 0;
-	self.openNow = 0;
-	self.hotAndNew = 0;
-	self.offeringADeal = 0;
-	self.delivery = 0;
-	self.bestMatch = 0;
-	self.distance = 0;
-	self.rating = 0;
-	self.mostReviewed = 0;
+	self.openNow = NO;
+	self.hotAndNew = NO;
+	self.offeringADeal = NO;
+	self.delivery = NO;
+	self.bestMatch = NO;
+	self.distance = NO;
+	self.rating = NO;
+	self.mostReviewed = NO;
 	
 	return self;
 }

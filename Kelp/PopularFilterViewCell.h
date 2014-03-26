@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NumericFilterViewCell.h"
+#import "FilterViewCell.h"
 
-@interface PopularFilterViewCell : UITableViewCell <NumericFilterViewCell>
+@interface PopularFilterViewCell : UITableViewCell <FilterViewCell>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *valueSwitch;

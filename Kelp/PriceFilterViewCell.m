@@ -10,7 +10,8 @@
 
 @implementation PriceFilterViewCell
 
-@synthesize modelValue = _modelValue;
+@synthesize filterModel = _filterModel;
+@synthesize filterValueName = _filterValueName;
 
 - (void)awakeFromNib
 {
@@ -25,13 +26,14 @@
     // Configure the view for the selected state
 }
 
-- (void)setModelValue:(NSNumber *)value {
-	self.valueControl.selectedSegmentIndex = [value integerValue];
+- (void)setFilterModel:(FilterModel *)model withValueName:(NSString *)name {
+	self.filterModel = model;
+	self.filterValueName = name;
+	self.valueControl.selectedSegmentIndex = [[self.filterModel valueForKey:self.filterValueName] intValue];
 }
 
 - (void)didChangeValue:(id)sender {
-	_modelValue = [NSNumber numberWithInteger:self.valueControl.selectedSegmentIndex];
-	NSLog(@"set model value to:%i", [_modelValue intValue]);
+	[self.filterModel setValue:[NSNumber numberWithInt:self.valueControl.selectedSegmentIndex] forKey:self.filterValueName];
 }
 
 @end

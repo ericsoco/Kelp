@@ -11,7 +11,7 @@
 #import "PopularFilterViewCell.h"
 #import "SortFilterViewCell.h"
 #import "MenuDisclosureViewCell.h"
-#import "NumericFilterViewCell.h"
+#import "FilterViewCell.h"
 
 @interface FilterTableViewController ()
 
@@ -68,11 +68,11 @@ NSArray *sortTitles;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-//	NSLog(@"FilterModel:%@", _filterModel);
+	NSLog(@"FilterModel:%@", _filterModel);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-//	NSLog(@"FilterModel:%@", _filterModel);
+	NSLog(@"FilterModel:%@", _filterModel);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -110,14 +110,14 @@ NSArray *sortTitles;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell <NumericFilterViewCell> *cell;
+	UITableViewCell <FilterViewCell> *cell;
 	
 	switch (indexPath.section) {
 		
 		// Price
 		case 0:
 			cell = [tableView dequeueReusableCellWithIdentifier:@"PriceFilterViewCell" forIndexPath:indexPath];
-			cell.modelValue = _filterModel.price;
+			[cell setFilterModel:_filterModel withValueName:@"price"];
 			break;
 		
 		// Popular
@@ -128,16 +128,16 @@ NSArray *sortTitles;
 			// Map model data to view.
 			switch (indexPath.row) {
 				case 0:
-					cell.modelValue = _filterModel.openNow;
+					[cell setFilterModel:_filterModel withValueName:@"openNow"];
 					break;
 				case 1:
-					cell.modelValue = _filterModel.hotAndNew;
+					[cell setFilterModel:_filterModel withValueName:@"hotAndNew"];
 					break;
 				case 2:
-					cell.modelValue = _filterModel.offeringADeal;
+					[cell setFilterModel:_filterModel withValueName:@"offeringADeal"];
 					break;
 				case 3:
-					cell.modelValue = _filterModel.delivery;
+					[cell setFilterModel:_filterModel withValueName:@"delivery"];
 					break;
 			}
 			break;
@@ -154,16 +154,16 @@ NSArray *sortTitles;
 				// Map model data to view.
 				switch (indexPath.row) {
 					case 0:
-						cell.modelValue = _filterModel.bestMatch;
+						[cell setFilterModel:_filterModel withValueName:@"bestMatch"];
 						break;
 					case 1:
-						cell.modelValue = _filterModel.distance;
+						[cell setFilterModel:_filterModel withValueName:@"distance"];
 						break;
 					case 2:
-						cell.modelValue = _filterModel.rating;
+						[cell setFilterModel:_filterModel withValueName:@"rating"];
 						break;
 					case 3:
-						cell.modelValue = _filterModel.mostReviewed;
+						[cell setFilterModel:_filterModel withValueName:@"mostReviewed"];
 						break;
 				}
 			}

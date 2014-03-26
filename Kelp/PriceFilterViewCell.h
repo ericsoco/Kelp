@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NumericFilterViewCell.h"
+#import "FilterViewCell.h"
 
-@interface PriceFilterViewCell : UITableViewCell <NumericFilterViewCell>
+@interface PriceFilterViewCell : UITableViewCell <FilterViewCell>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *valueControl;
 
